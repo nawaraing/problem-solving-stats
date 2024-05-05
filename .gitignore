@@ -1,3 +1,6 @@
+# nawaraing@github.com
+*.ini
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
