@@ -26,7 +26,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest requests
+        pip install flake8 pytest requests beautifulsoup4
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
@@ -40,7 +40,7 @@ jobs:
         cat src/lib/config.ini
     - name: Set personal-info.ini
       run: |
-        echo -e "[SUBSCRIBER]\member1 = ${{secrets.MEMBER1}}\member2 = ${{secrets.MEMBER2}}" >> src/problem-solving-stats/personal-info.ini
+        echo -e "[SUBSCRIBER]\nmember1 = ${{secrets.MEMBER1}}\nmember2 = ${{secrets.MEMBER2}}" >> src/problem-solving-stats/personal-info.ini
         cat src/problem-solving-stats/personal-info.ini
     - name: Test with coolSms
       run: |
