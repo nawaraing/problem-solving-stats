@@ -41,7 +41,7 @@ def crawling():
 
     for data in personal_info.list_of_datas:
         url = 'https://www.acmicpc.net/status?problem_id=&user_id=' + data[personal_info.BAEKJUN_ID] + '&language_id=-1&result_id=-1'
-        # print("url: " + url)
+        print("url: " + url)
 
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
@@ -49,7 +49,7 @@ def crawling():
         response = requests.get(url, headers=headers)
         # response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
-        # print("soup: " + str(soup))
+        print("soup: " + str(soup))
 
         # 원하는 요소 추출
         table = soup.find('table')
