@@ -17,7 +17,7 @@ def send_alarm(msg_datas):
                 'text': '- 푼 문제 수: ' + str(data.solve_problem_number) + '문제\n'
                         + '- 시도 횟수: ' + str(data.number_of_attempt) + '회\n'
                         + '- solved.ac 티어: ' + data.member_tier + '\n'
-                        + '- solved.ac 래이팅: ' + str(data.member_rating) + '점\n'
+                        + '- solved.ac 레이팅: ' + str(data.member_rating) + '점\n'
                         + '- solved.ac 랭크: ' + str(data.member_rank) + '등'
         })
     data = {
