@@ -34,10 +34,14 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Set api key and secret
+    - name: Set config.ini
       run: |
         echo -e "[AUTH]\napi_key = ${{secrets.COOLSMS_API_KEY}}\napi_secret = ${{secrets.COOLSMS_API_SECRET}}\n[SERVER]\ndomain = api.coolsms.co.kr\nprotocol = https\nprefix =" >> src/lib/config.ini
         cat src/lib/config.ini
+    - name: Set personal-info.ini
+      run: |
+        echo -e "[SUBSCRIBER]\member1 = ${{secrets.MEMBER1}}\member2 = ${{secrets.MEMBER2}}" >> src/problem-solving-stats/personal-info.ini
+        cat src/problem-solving-stats/personal-info.ini
     - name: Test with coolSms
       run: |
         python src/problem-solving-stats/main.py
