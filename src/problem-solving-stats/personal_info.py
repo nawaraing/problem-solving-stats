@@ -13,4 +13,4 @@ env_config.read(lib_dir + '/personal-info.ini')
 # raw datas
 list_of_datas = []
 list_of_datas.append(env_config['SUBSCRIBER']['member1'].split())
-list_of_datas.append(env_config['SUBSCRIBER']['member2'].split())
+# list_of_datas.append(env_config['SUBSCRIBER']['member2'].split())
