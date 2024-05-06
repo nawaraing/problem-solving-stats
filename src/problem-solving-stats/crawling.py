@@ -62,8 +62,9 @@ def crawling():
             }
             response = requests.get(url, headers=headers)
             # response = requests.get(url)
+            print("response.text: " + response.text)
             soup = BeautifulSoup(response.text, 'html.parser')
-            print("soup: " + str(soup))
+            # print("soup: " + str(soup))
 
             # 원하는 요소 추출
             table = soup.find('table')
