@@ -62,6 +62,7 @@ def crawling():
             }
             response = requests.get(url, headers=headers)
             # response = requests.get(url)
+            print("response.status_code: " + str(response.status_code))
             print("response.text: " + response.text)
             soup = BeautifulSoup(response.text, 'html.parser')
             # print("soup: " + str(soup))
