@@ -17,4 +17,7 @@ login_pwd = env_config['LOGIN']['PWD']
 # raw datas
 list_of_datas = []
 list_of_datas.append(env_config['SUBSCRIBER']['member1'].split())
-# list_of_datas.append(env_config['SUBSCRIBER']['member2'].split())
+list_of_datas.append(env_config['SUBSCRIBER']['member2'].split())
+list_of_datas.append(env_config['SUBSCRIBER']['member3'].split())
+list_of_datas.append(env_config['SUBSCRIBER']['member4'].split())
+list_of_datas.append(env_config['SUBSCRIBER']['member5'].split())
