@@ -42,7 +42,7 @@ jobs:
         cat src/lib/config.ini
     - name: Set personal-info.ini
       run: |
-        echo -e "[SUBSCRIBER]\nmember1 = ${{secrets.MEMBER1}}\nmember2 = ${{secrets.MEMBER2}}" >> src/problem-solving-stats/personal-info.ini
+        echo -e "[SUBSCRIBER]\nmember1 = ${{secrets.MEMBER1}}\nmember2 = ${{secrets.MEMBER2}}\nmember3 = ${{secrets.MEMBER3}}\nmember4 = ${{secrets.MEMBER4}}\nmember5 = ${{secrets.MEMBER5}}" >> src/problem-solving-stats/personal-info.ini
         cat src/problem-solving-stats/personal-info.ini
     - name: Test with coolSms
       run: |
