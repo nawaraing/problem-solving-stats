@@ -136,6 +136,10 @@ def crawling(session):
     }
 
     for data in personal_info.list_of_datas:
+        if data[0] == '':
+            logging.debug('empty member')
+            continue
+
         #
         # 푼 문제 수
         # 시도 횟수
